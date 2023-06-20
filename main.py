@@ -26,7 +26,7 @@ def get_data(month, day):
                     if (line):
                         line = line.replace('\n', '')
                         dateList = line.split(';')
-                        if (dateList[month - 1] and int(dateList[month - 1]) == day):
+                        if (dateList[month - 1].isnumeric() and int(dateList[month - 1]) == day):
                             operationList.append(operation)
                             break
     if (operationList):
